@@ -3,7 +3,7 @@
 # This file runs when a DM logs you into a graphical session.
 # If you use startx/xinit like a Chad, this file will also be sourced.
 
-xrandr --dpi 144 & 	# Set DPI. User may want to use a larger number for larger screens.
+xrandr --dpi 212 & 	# Set DPI. User may want to use a larger number for larger screens.
 xbacklight = 40 &
 xss-lock -- slock &
 setbg &			# set the background with the `setbg` script
