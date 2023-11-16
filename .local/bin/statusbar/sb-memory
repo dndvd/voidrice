@@ -9,17 +9,4 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-free --mebi | sed -n '2{p;q}' | awk '{
-    used = $3 - $6;
-    total = $2 / 1024;
-
-    if (used < 0) {
-        used = -used;
-        printf ("🧠%2.0fM/%2.2fG\n", used, total);
-    } else {
-        if (used >= 1024)
-            printf ("🧠%2.2fG/%2.2fG\n", (used / 1024), total);
-        else
-            printf ("🧠%2.0fM/%2.2fG\n", used, total);
-    }
-}'
+free --mebi | sed -n '2{p;q}' | awk '{printf ("🧠%2.2fGiB/%2.2fGiB\n", ( $3 / 1024), ($2 / 1024))}'
