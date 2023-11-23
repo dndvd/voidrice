@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm -f ~/.pulse-cookie
+rm -f ~/.steampath
+rm -f ~/.steampid
